@@ -1,0 +1,105 @@
+:root {
+  --white: #fff;
+  --main-offset-color: #5a189a;
+  --black-text: #001219;
+}
+
+/* hide and visible */
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: inline-block;
+}
+
+/* elements */
+* {
+  background-color: thistle;
+}
+
+body {
+  padding-left: 30%;
+}
+
+hr {
+  margin: 0;
+  border-bottom: #001219 2px solid;
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+  padding-left: 2%;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 90%;
+}
+
+h1 {
+  text-align: left;
+  font-size: 250%;
+  margin-bottom: 1%;
+}
+
+p {
+  margin-top: 1%;
+  font-size: 150%;
+  font-weight: bolder;
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+  color: var(--main-offset-color);
+  margin-bottom: 0%;
+  padding: 0%;
+}
+
+/* Starting page */
+button {
+  background-image: linear-gradient(to bottom right, #9d4edd, #5a189a);
+  color: var(--white);
+  font-weight: bold;
+  font-size: 100%;
+  padding: 1%;
+  border-radius: 15px;
+  width: fit-content;
+  margin-top: 0.5%;
+  margin-bottom: 0.8%;
+}
+
+button:hover {
+  background-image: none;
+  background-color: #e0aaff;
+  box-shadow: 0 1.7px #666;
+}
+
+button:active {
+  background-color: #e0aaff;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#start-button {
+  font-size: 120%;
+}
+/* Questions Container */
+.question {
+  display: flex;
+  flex-direction: column;
+}
+.answers {
+  display: flex;
+  flex-direction: column;
+}
+#wrong {
+  position: relative;
+  width: 30%;
+  left: 20%;
+  top: -50px;
+  align-items: center;
+  text-align: center;
+}

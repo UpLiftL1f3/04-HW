@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="StyleSheet" href="./Assets/css/style.css" />
+    <title>Take The Quiz</title>
+  </head>
+  <body>
+    <section class="visible" id="time">
+      <div id="timeEl"></div>
+    </section>
+    <section id="starting-container" data-state="visible">
+      <h1>4th Unit Quiz</h1>
+      <p>You have 60 seconds to complete this Quiz!</p>
+      <p>
+        if you get the question wrong 10 seconds will be deducted from the
+        timer!
+      </p>
+      <hr />
+      <button id="start-button">Click to Start the Quiz</button>
+    </section>
+    <section class="hidden" data-set="hidden" id="q-container">
+      <section class="visible" id="q1">
+        <div class="question">
+          <h1>Question 1</h1>
+          <p>What is the term for True or False?</p>
+          <section class="bottom-portion">
+            <div class="answers">
+              <button class="wrongAnswerChoices" id="q1-1">String</button>
+              <button class="wrongAnswerChoices" id="q1-2">Integer</button>
+              <button id="q1-3">Boolean</button>
+              <button class="wrongAnswerChoices" id="q1-4">algorithm</button>
+            </div>
+            <ul class="hidden" id="wrong">
+              <li id="wrongLi">
+                Sorry that answer is Incorrect. Please try again
+              </li>
+            </ul>
+          </section>
+        </div>
+      </section>
+      <!-- Question 2 -->
+      <section class="hidden" id="q2">
+        <div class="question">
+          <h1>Question 2</h1>
+          <p>
+            what is the right way of calling an Element with the id="hello"?
+          </p>
+          <section class="bottom-portion">
+            <div class="answers">
+              <button class="wrongAnswerChoices" id="q2-1">
+                document.getElementById('#hello')
+              </button>
+              <button class="wrongAnswerChoices" id="q2-2">
+                document.getElementById('.hello')
+              </button>
+              <button class="wrongAnswerChoices" id="q2-3">
+                document.getElementById($(hello))
+              </button>
+              <button id="q2-4">document.getElementById('hello')</button>
+            </div>
+            <p class="hidden" id="wrong">
+              Sorry that answer is Incorrect. Please try again
+            </p>
+          </section>
+        </div>
+      </section>
+      <!-- Question 3 -->
+      <section class="hidden" id="q3">
+        <div class="question">
+          <h1>Question 3</h1>
+          <p>What is the result of the following problem?</p>
+          <p>var x = 100</p>
+          <p>var y = "200"</p>
+          <p>console.log(x + y)</p>
+          <section class="bottom-portion">
+            <div class="answers">
+              <button class="wrongAnswerChoices" id="q3-1">300</button>
+              <button id="q3-2">"100200"</button>
+              <button class="wrongAnswerChoices" id="q3-3">100200</button>
+              <button class="wrongAnswerChoices" id="q3-4">200</button>
+            </div>
+            <p class="hidden" id="wrong">
+              Sorry that answer is Incorrect. Please try again
+            </p>
+          </section>
+        </div>
+      </section>
+      <!-- Question 4 -->
+      <section class="hidden" id="q4">
+        <div class="question">
+          <h1>Question 4</h1>
+          <p>
+            Object.entries() returns an array whose elements are arrays
+            corresponding to the enumerable string-keyed property [____, ____]
+            pairs found directly upon object.
+          </p>
+          <section class="bottom-portion">
+            <div class="answers">
+              <button class="wrongAnswerChoices" id="q4-1">
+                [key, integer]
+              </button>
+              <button class="wrongAnswerChoices" id="q4-2">
+                [string, value]
+              </button>
+              <button id="q4-3">[key, value]</button>
+              <button class="wrongAnswerChoices" id="q4-4">
+                [string, integer]
+              </button>
+            </div>
+            <p class="hidden" id="wrong">
+              Sorry that answer is Incorrect. Please try again
+            </p>
+          </section>
+        </div>
+      </section>
+      <!--Game Over Page -->
+    </section>
+    <section class="hidden" id="game-over">
+      <h1>GAME OVER</h1>
+      <form action="/action_page.php">
+        <label for="initials">Your Initials:</label>
+        <input type="text" id="initials-inp" name="initials" /><br /><br />
+        <h1 id="score"></h1>
+        <button id="submit">Submit</button>
+      </form>
+
+      <p>
+        Click the "Submit" button and the form-data will be sent to a page on
+        the server called "action_page.php".
+      </p>
+    </section>
+
+    <script src="./Assets/js/script.js"></script>
+  </body>
+</html>
